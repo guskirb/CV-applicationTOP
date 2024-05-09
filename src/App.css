@@ -5,6 +5,7 @@
 
 .sidebar {
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   background-color: blue;
@@ -15,7 +16,7 @@
   top: 0;
 }
 
-.sidebarPersonal {
+.sidebarSection {
   display: flex;
   flex-flow: column;
   width: 75%;
@@ -37,6 +38,19 @@ label {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 20px;
+}
+
+.fullName,
+.jobEmployer,
+.dates,
+.nameCity,
+.qualDate {
+  display: flex;
+  gap: 20px;
+}
+
+textarea {
+  resize: none;
 }
 
 .cvContainer {

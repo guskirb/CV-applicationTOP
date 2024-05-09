@@ -1,6 +1,8 @@
+import FormInput from "./form";
+
 function PersonalInput() {
   return (
-    <div className="sidebarPersonal">
+    <div className="sidebarSection sidebarPersonal">
       <h1>Personal Details</h1>
       <div className="fullName">
         <FormInput name="First Name" type="text" />
@@ -18,13 +20,4 @@ function PersonalInput() {
   );
 }
 
-function FormInput({ name, type }) {
-  return (
-    <label>
-      {name}
-      <input type={type}></input>
-    </label>
-  );
-}
-
-export { PersonalInput };
+export default PersonalInput;
