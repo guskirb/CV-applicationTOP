@@ -4,7 +4,7 @@ import WorkInput from "./work";
 import EducationInput from "./education";
 
 function Sidebar() {
-  const [activeIndex, setActiveIndex] = useState("");
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="sidebar">
       <PersonalInput
