@@ -1,10 +1,9 @@
 function CV() {
-    return (
-        <div className="cvContainer">
-            <hi> hi</hi>
-        </div>
-    )
-
+  return (
+    <div className="cv">
+      <hi> hi</hi>
+    </div>
+  );
 }
 
 export default CV;

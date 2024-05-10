@@ -1,6 +1,8 @@
 #root {
   margin: 0;
-  display: flex;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .sidebar {
@@ -10,7 +12,6 @@
   justify-content: flex-start;
   background-color: blue;
   margin: 0;
-  width: 40vw;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -19,7 +20,7 @@
 .sidebarSection {
   display: flex;
   flex-flow: column;
-  width: 75%;
+  width: 80%;
   background-color: brown;
   margin: 10px;
   border-radius: 10px;
@@ -40,6 +41,7 @@
   transform-origin: top center;
   background-color: brown;
   padding: 20px;
+  padding-top: 0px;
   border-radius: 10px;
 }
 
@@ -116,9 +118,17 @@ textarea {
 }
 
 .cvContainer {
-  background-color: red;
+  background-color: rgb(206, 206, 206);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv {
+  background-color: #ffffff;
   width: 794px;
   height: 1123px;
   margin: 120px;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
