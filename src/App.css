@@ -43,6 +43,7 @@
   padding: 20px;
   padding-top: 0px;
   border-radius: 10px;
+  gap: 10px;
 }
 
 @keyframes growDown {
@@ -126,9 +127,10 @@ textarea {
 
 .cv {
   background-color: #ffffff;
-  width: 794px;
-  height: 1123px;
+  width: 694px;
+  height: 1023px;
   margin: 120px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 50px;
 }
