@@ -1,6 +1,6 @@
 import FormInput from "./form";
 
-function WorkInput({ details, onChange, isActive, onShow }) {
+function WorkInput({ details, onChange, isActive, onShow, addWork }) {
   return (
     <div
       className={
@@ -54,6 +54,7 @@ function WorkInput({ details, onChange, isActive, onShow }) {
               id={"details"}
             />
           </label>
+          <button onClick={addWork}> + </button>
         </div>
       ) : null}
     </div>

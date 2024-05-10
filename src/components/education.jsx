@@ -1,6 +1,6 @@
 import FormInput from "./form";
 
-function EducationInput({ details, onChange, isActive, onShow }) {
+function EducationInput({ details, onChange, isActive, onShow, addEducation }) {
   return (
     <div
       className={
@@ -33,6 +33,7 @@ function EducationInput({ details, onChange, isActive, onShow }) {
               onChange={onChange}
               id={"date"} />
           </div>
+          <button onClick={addEducation}> + </button>
         </div>
       ) : null}
     </div>
