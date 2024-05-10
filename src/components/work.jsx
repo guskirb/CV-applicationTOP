@@ -1,9 +1,16 @@
 import FormInput from "./form";
 
-function WorkInput() {
+function WorkInput({ isActive, onShow }) {
   return (
-    <div className="sidebarSection sidebarWork">
-      <h1>Work Experience</h1>
+    <div className="sidebarSection sidebarWork" onClick={onShow}>
+      <div className="sidebarUpper">
+        <h1>Work Experience</h1>
+        {isActive ? (
+          <div className="up" />
+        ) : (<div className="down" />) }
+      </div>
+      {isActive ? (
+        <>
       <div className="jobEmployer">
         <FormInput name="Job Title" type="text" />
         <FormInput name="Employer" type="text" />
@@ -16,6 +23,7 @@ function WorkInput() {
         Details
         <textarea rows="6" />
       </label>
+      </> ) : null}
     </div>
   );
 }
