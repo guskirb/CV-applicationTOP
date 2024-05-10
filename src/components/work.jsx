@@ -1,6 +1,6 @@
 import FormInput from "./form";
 
-function WorkInput({ isActive, onShow }) {
+function WorkInput({ details, onChange, isActive, onShow }) {
   return (
     <div
       className={
@@ -14,18 +14,47 @@ function WorkInput({ isActive, onShow }) {
       {isActive ? (
         <div className="sidebarLower">
           <div className="jobEmployer">
-            <FormInput name="Job Title" type="text" />
-            <FormInput name="Employer" type="text" />
+            <FormInput
+              name="Job Title"
+              type="text"
+              details={details.title}
+              onChange={onChange}
+              id={"title"}
+            />
+            <FormInput
+              name="Employer"
+              type="text"
+              details={details.employer}
+              onChange={onChange}
+              id={"employer"}
+            />
           </div>
           <div className="dates">
-            <FormInput name="Start Date" type="date" />
-            <FormInput name="End Date" type="date" />
+            <FormInput
+              name="Start Date"
+              type="date"
+              details={details.start}
+              onChange={onChange}
+              id={"start"}
+            />
+            <FormInput
+              name="End Date"
+              type="date"
+              details={details.end}
+              onChange={onChange}
+              id={"end"}
+            />
           </div>
           <label>
             Details
-            <textarea rows="6" />
+            <textarea
+              rows="6"
+              value={details.details}
+              onChange={onChange}
+              id={"details"}
+            />
           </label>
-        </ div>
+        </div>
       ) : null}
     </div>
   );

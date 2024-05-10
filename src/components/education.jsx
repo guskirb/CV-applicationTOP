@@ -1,6 +1,6 @@
 import FormInput from "./form";
 
-function EducationInput({ isActive, onShow }) {
+function EducationInput({ details, onChange, isActive, onShow }) {
   return (
     <div
       className={
@@ -14,14 +14,26 @@ function EducationInput({ isActive, onShow }) {
       {isActive ? (
         <div className="sidebarLower">
           <div className="nameCity">
-            <FormInput name="School Name" type="text" />
-            <FormInput name="Location" type="text" />
+            <FormInput
+              name="School Name"
+              type="text"
+              details={details.school}
+              onChange={onChange}
+              id={"school"}
+            />
+            <FormInput name="Location" type="text" details={details.location}
+              onChange={onChange}
+              id={"location"}/>
           </div>
           <div className="qualDate">
-            <FormInput name="Qualification" type="text" />
-            <FormInput name="Graduation Date" type="date" />
+            <FormInput name="Qualification" type="text" details={details.qualification}
+              onChange={onChange}
+              id={"qualification"}/>
+            <FormInput name="Graduation Date" type="date" details={details.date}
+              onChange={onChange}
+              id={"date"} />
           </div>
-        </ div>
+        </div>
       ) : null}
     </div>
   );
