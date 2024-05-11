@@ -3,7 +3,18 @@ import PersonalInput from "./personal";
 import WorkInput from "./work";
 import EducationInput from "./education";
 
-function Sidebar({ details, onChange, addWork, work, removeWork, addEducation, education, removeEducation }) {
+function Sidebar({
+  details,
+  onChange,
+  addWork,
+  work,
+  removeWork,
+  editWork,
+  addEducation,
+  education,
+  removeEducation,
+  editEducation,
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -26,6 +37,7 @@ function Sidebar({ details, onChange, addWork, work, removeWork, addEducation, e
         addWork={addWork}
         work={work}
         removeWork={removeWork}
+        editWork={editWork}
       />
       <EducationInput
         details={details}
@@ -37,6 +49,7 @@ function Sidebar({ details, onChange, addWork, work, removeWork, addEducation, e
         addEducation={addEducation}
         education={education}
         removeEducation={removeEducation}
+        editEducation={editEducation}
       />
     </div>
   );

@@ -9,6 +9,7 @@ function EducationInput({
   addEducation,
   education,
   removeEducation,
+  editEducation
 }) {
   const listEducation = education.map((item) => (
     <div
@@ -19,6 +20,7 @@ function EducationInput({
         experience={item}
         remove={removeEducation}
         id={item.id}
+        edit={editEducation}
       />
     </div>
   ));

@@ -54,12 +54,25 @@ function App() {
       end: "",
       details: "",
     });
-    console.log(work);
   }
 
   function removeWork(e) {
-    setWork(work.filter(item => item.id !== e.target.id));
-    console.log(work);
+    setWork(work.filter((item) => item.id !== e.target.id));
+  }
+
+  function editWork(e) {
+    const current = work.find((element) => element.id === e.target.id);
+
+    setDetails({
+      ...details,
+      title: current.title,
+      employer: current.employer,
+      start: current.start,
+      end: current.end,
+      details: current.details,
+    });
+
+    setWork(work.filter((item) => item.id !== e.target.id));
   }
 
   function addEducation(e) {
@@ -86,7 +99,21 @@ function App() {
   }
 
   function removeEducation(e) {
-    setEducation(education.filter(item => item.id !== e.target.id));
+    setEducation(education.filter((item) => item.id !== e.target.id));
+  }
+
+  function editEducation(e) {
+    const current = education.find((element) => element.id === e.target.id);
+
+    setDetails({
+      ...details,
+      school: current.title,
+      location: current.location,
+      qualification: current.qualification,
+      date: current.date,
+    });
+
+    setEducation(education.filter((item) => item.id !== e.target.id));
   }
 
   return (
@@ -97,9 +124,11 @@ function App() {
         addWork={addWork}
         work={work}
         removeWork={removeWork}
+        editWork={editWork}
         addEducation={addEducation}
         education={education}
         removeEducation={removeEducation}
+        editEducation={editEducation}
       />
       <div className="cvContainer">
         <CV />

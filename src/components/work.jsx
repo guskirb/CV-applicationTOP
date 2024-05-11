@@ -9,13 +9,14 @@ function WorkInput({
   addWork,
   work,
   removeWork,
+  editWork
 }) {
   const listWork = work.map((item) => (
     <div
       key={item.id.toString()}
       className={"experienceList" + (isActive ? " active" : " inactive")}
     >
-      <ExperienceSection experience={item} remove={removeWork} id={item.id} />
+      <ExperienceSection experience={item} remove={removeWork} id={item.id} edit={editWork}/>
     </div>
   ));
 
