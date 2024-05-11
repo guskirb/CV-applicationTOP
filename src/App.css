@@ -5,6 +5,27 @@
   grid-template-columns: 1fr 2fr;
 }
 
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 100vw;
+  border: 3px solid rgb(206, 206, 206);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(202, 0, 0);
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+  border: 3px solid blue;
+}
+
 .sidebar {
   display: flex;
   flex-flow: column;
@@ -15,6 +36,7 @@
   height: 100vh;
   position: sticky;
   top: 0;
+  overflow-y: scroll;
 }
 
 .sidebarSection {
@@ -29,7 +51,7 @@
 .sidebarUpper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   cursor: pointer;
   padding: 15px;
 }
@@ -64,6 +86,28 @@
   width: 20px;
   height: 20px;
   transition: all 0.4s ease;
+  margin-left: auto;
+}
+
+.personIcon {
+  background-image: url(./assets/person.svg);
+}
+
+.workIcon {
+  background-image: url(./assets/work.svg);
+}
+
+.schoolIcon {
+  background-image: url(./assets/school.svg);
+}
+
+.personIcon,
+.workIcon,
+.schoolIcon {
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 .down {
@@ -157,7 +201,6 @@ textarea {
 }
 
 .cvContainer {
-  background-color: rgb(206, 206, 206);
   display: flex;
   align-items: center;
   justify-content: center;
