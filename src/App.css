@@ -215,6 +215,7 @@ textarea {
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -223,8 +224,20 @@ textarea {
   grid-column: 2 / 3;
 }
 
+.cvDetails h1,
+.cvDetails h2 {
+  padding:10px;
+}
+
+.cvDetails p {
+  border-block: solid 1px black;
+  padding: 10px;
+  overflow-wrap: break-word;
+}
+
 .cvProfile {
   padding: 10px;
+  grid-row: 1 / 3;
 }
 
 .cvProfile div {
