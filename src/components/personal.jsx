@@ -8,6 +8,7 @@ function PersonalInput({ details, onChange, isActive, onShow }) {
       }
     >
       <div className="sidebarUpper" onClick={onShow}>
+        <div className="personIcon"></div>
         <h1>Personal Details</h1>
         {isActive ? <div className="arrow" /> : <div className="arrow down" />}
       </div>

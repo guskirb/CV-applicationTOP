@@ -32,6 +32,7 @@ function EducationInput({
         }
       >
         <div className="sidebarUpper" onClick={onShow}>
+          <div className="schoolIcon"></div>
           <h1>Education</h1>
           {isActive ? (
             <div className="arrow" />

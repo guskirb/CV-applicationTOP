@@ -27,6 +27,7 @@ function WorkInput({
         }
       >
         <div className="sidebarUpper" onClick={onShow}>
+          <div className="workIcon"></div>
           <h1>Work Experience</h1>
           {isActive ? (
             <div className="arrow" />
