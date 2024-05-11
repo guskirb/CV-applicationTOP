@@ -70,7 +70,7 @@ function EducationInput({
               />
               <FormInput
                 name="Graduation Date"
-                type="date"
+                type="month"
                 details={details.date}
                 onChange={onChange}
                 id={"date"}

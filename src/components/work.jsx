@@ -58,14 +58,14 @@ function WorkInput({
               <div className="dates">
                 <FormInput
                   name="Start Date"
-                  type="date"
+                  type="month"
                   details={details.start}
                   onChange={onChange}
                   id={"start"}
                 />
                 <FormInput
                   name="End Date"
-                  type="date"
+                  type="month"
                   details={details.end}
                   onChange={onChange}
                   id={"end"}
