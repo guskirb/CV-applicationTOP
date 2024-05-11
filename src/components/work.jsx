@@ -78,6 +78,7 @@ function WorkInput({
                   value={details.details}
                   onChange={onChange}
                   id={"details"}
+                  maxlength="400"
                 />
               </label>
               <button onClick={addWork}> + </button>

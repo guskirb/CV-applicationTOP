@@ -44,6 +44,7 @@ function PersonalInput({ details, onChange, isActive, onShow }) {
               value={details.about}
               onChange={onChange}
               id={"about"}
+              maxlength="400"
             />
           </label>
           <FormInput
