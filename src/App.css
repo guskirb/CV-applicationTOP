@@ -19,7 +19,7 @@
   background: rgb(202, 0, 0);
 }
 
-.sidebar::-webkit-scrollbar-thumb{
+.sidebar::-webkit-scrollbar-thumb {
   border: 2px solid blue;
 }
 
@@ -208,9 +208,68 @@ textarea {
 .cv {
   background-color: #ffffff;
   width: 694px;
-  height: 1023px;
+  min-height: 1023px;
   margin: 120px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.cvDetails {
+  padding: 10px;
+  grid-column: 2 / 3;
+}
+
+.cvProfile {
+  padding: 10px;
+}
+
+.cvProfile div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cvProfile p {
+  margin-bottom: 10px;
+}
+
+.cvProfile > h2 {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  margin-block: 20px;
+}
+
+.phoneIcon {
+  background-image: url(./assets/phone.svg);
+}
+
+.emailIcon {
+  background-image: url(./assets/email.svg);
+}
+
+.websiteIcon {
+  background-image: url(./assets/link.svg);
+}
+
+.phoneIcon,
+.emailIcon,
+.websiteIcon {
+  height: 20px;
+  width: 20px;
+  background-size: 100%;
+}
+
+.profilePic {
+  background-image: url(./assets/profilepic.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 50px;
 }

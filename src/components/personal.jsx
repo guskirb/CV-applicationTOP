@@ -31,35 +31,28 @@ function PersonalInput({ details, onChange, isActive, onShow }) {
             />
           </div>
           <FormInput
-            name="Street Address"
+            name="Role"
             type="text"
-            details={details.street}
+            details={details.role}
             onChange={onChange}
-            id={"street"}
+            id={"role"}
           />
-          <div className="address">
-            <FormInput
-              name="City/Town"
-              type="text"
-              details={details.city}
+          <label>
+            About You
+            <textarea
+              rows="6"
+              value={details.about}
               onChange={onChange}
-              id={"city"}
+              id={"about"}
             />
-            <FormInput
-              name="County/State"
-              type="text"
-              details={details.county}
-              onChange={onChange}
-              id={"county"}
-            />
-            <FormInput
-              name="Post/Zipcode"
-              type="text"
-              details={details.postcode}
-              onChange={onChange}
-              id={"postcode"}
-            />
-          </div>
+          </label>
+          <FormInput
+            name="Number"
+            type="tel"
+            details={details.num}
+            onChange={onChange}
+            id={"num"}
+          />
           <FormInput
             name="Email"
             type="email"
@@ -68,11 +61,11 @@ function PersonalInput({ details, onChange, isActive, onShow }) {
             id={"email"}
           />
           <FormInput
-            name="Number"
-            type="tel"
-            details={details.num}
+            name="Website"
+            type="url"
+            details={details.website}
             onChange={onChange}
-            id={"num"}
+            id={"website"}
           />
         </div>
       ) : null}

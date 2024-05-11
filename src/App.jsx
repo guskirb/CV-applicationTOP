@@ -8,12 +8,11 @@ function App() {
   const [details, setDetails] = useState({
     first: "",
     last: "",
-    street: "",
-    city: "",
-    county: "",
-    post: "",
     email: "",
     num: "",
+    website: "",
+    about: "",
+    role: "",
     title: "",
     employer: "",
     start: "",
@@ -131,7 +130,7 @@ function App() {
         editEducation={editEducation}
       />
       <div className="cvContainer">
-        <CV />
+        <CV details={details} work={work} education={education} />
       </div>
     </>
   );
