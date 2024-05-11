@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar";
 import CV from "./components/cv";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [details, setDetails] = useState({
@@ -31,9 +32,13 @@ function App() {
   }
 
   function addWork(e) {
+    if (details.title === "") {
+      return;
+    }
     setWork([
       ...work,
       {
+        id: uuidv4(),
         title: details.title,
         employer: details.employer,
         start: details.start,
@@ -49,13 +54,23 @@ function App() {
       end: "",
       details: "",
     });
+    console.log(work);
+  }
+
+  function removeWork(e) {
+    setWork(work.filter(item => item.id !== e.target.id));
+    console.log(work);
   }
 
   function addEducation(e) {
+    if (details.school === "") {
+      return;
+    }
     setEducation([
       ...education,
       {
-        school: details.school,
+        id: uuidv4(),
+        title: details.school,
         location: details.location,
         qualification: details.qualification,
         date: details.date,
@@ -70,13 +85,21 @@ function App() {
     });
   }
 
+  function removeEducation(e) {
+    setEducation(education.filter(item => item.id !== e.target.id));
+  }
+
   return (
     <>
       <Sidebar
         details={details}
         onChange={handleChange}
         addWork={addWork}
+        work={work}
+        removeWork={removeWork}
         addEducation={addEducation}
+        education={education}
+        removeEducation={removeEducation}
       />
       <div className="cvContainer">
         <CV />

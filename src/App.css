@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  padding: 20px;
+  padding: 15px;
 }
 
 .sidebarLower {
@@ -40,21 +40,21 @@
   animation: growDown 300ms ease-in-out forwards;
   transform-origin: top center;
   background-color: brown;
-  padding: 20px;
+  padding: 10px;
   padding-top: 0px;
   border-radius: 10px;
-  gap: 10px;
+  gap: 15px;
 }
 
 @keyframes growDown {
   0% {
-      transform: scaleY(0)
+    transform: scaleY(0);
   }
   80% {
-      transform: scaleY(1.1)
+    transform: scaleY(1.1);
   }
   100% {
-      transform: scaleY(1)
+    transform: scaleY(1);
   }
 }
 
@@ -94,11 +94,6 @@ textarea {
   padding: 5px;
 }
 
-.fullName {
-  display: flex;
-  gap: 20px;
-}
-
 .address {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -111,11 +106,54 @@ textarea {
 .nameCity,
 .qualDate {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 textarea {
   resize: none;
+}
+
+.experienceList {
+  background-color: aqua;
+  width: 80%;
+  border-radius: 10px;
+  animation: growOut 300ms ease-in-out forwards;
+  transform-origin: top center;
+  margin-bottom: 10px;
+}
+
+.experienceList > div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+@keyframes growOut {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bin {
+  background-image: url(./assets/trash.svg);
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.edit {
+  background-image: url(./assets/edit.svg);
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
 }
 
 .cvContainer {
