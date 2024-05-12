@@ -22,9 +22,11 @@ function App() {
     location: "",
     qualification: "",
     date: "",
+    skill: ""
   });
   const [work, setWork] = useState([]);
   const [education, setEducation] = useState([]);
+  const [skills, setSkills] = useState([]);
 
   function handleChange(e) {
     setDetails({ ...details, [e.target.id]: e.target.value });
@@ -115,6 +117,38 @@ function App() {
     setEducation(education.filter((item) => item.id !== e.target.id));
   }
 
+  function addSkill(e) {
+    if (details.skill === "") {
+      return;
+    }
+    setSkills([
+      ...skills,
+      {
+        id: uuidv4(),
+        title: details.skill
+      },
+    ]);
+    setDetails({
+      ...details,
+      skill: ""
+    });
+  }
+  
+  function removeSkill(e) {
+    setSkills(skills.filter((item) => item.id !== e.target.id));
+  }
+
+  function editSkill(e) {
+    const current = skills.find((element) => element.id === e.target.id);
+
+    setDetails({
+      ...details,
+      skill: current.title
+    });
+
+    setSkills(skills.filter((item) => item.id !== e.target.id));
+  }
+
   return (
     <>
       <Sidebar
@@ -128,6 +162,10 @@ function App() {
         education={education}
         removeEducation={removeEducation}
         editEducation={editEducation}
+        addSkill={addSkill}
+        skills={skills}
+        removeSkill={removeSkill}
+        editSkill={editSkill}
       />
       <div className="cvContainer">
         <CV details={details} work={work} education={education} />

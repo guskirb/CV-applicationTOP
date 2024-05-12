@@ -2,6 +2,7 @@ import { useState } from "react";
 import PersonalInput from "./personal";
 import WorkInput from "./work";
 import EducationInput from "./education";
+import SkillsInput from "./skills";
 
 function Sidebar({
   details,
@@ -14,6 +15,10 @@ function Sidebar({
   education,
   removeEducation,
   editEducation,
+  addSkill,
+  skills,
+  removeSkill,
+  editSkill
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -50,6 +55,18 @@ function Sidebar({
         education={education}
         removeEducation={removeEducation}
         editEducation={editEducation}
+      />
+      <SkillsInput
+        details={details}
+        onChange={onChange}
+        isActive={activeIndex === 3}
+        onShow={() =>
+          activeIndex === 3 ? setActiveIndex("") : setActiveIndex(3)
+        }
+        addSkill={addSkill}
+        skills={skills}
+        removeSkill={removeSkill}
+        editSkill={editSkill}
       />
     </div>
   );
