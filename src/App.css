@@ -96,7 +96,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .arrow {
-  background-image: url(./assets/arrow.svg);
+  background-image: url(/arrow.svg);
   background-size: 100%;
   width: 20px;
   height: 20px;
@@ -105,35 +105,35 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .personIcon {
-  background-image: url(./assets/person.svg);
+  background-image: url(/person.svg);
 }
 
 .workIcon {
-  background-image: url(./assets/work.svg);
+  background-image: url(/work.svg);
 }
 
 .schoolIcon {
-  background-image: url(./assets/school.svg);
+  background-image: url(/school.svg);
 }
 
 .skillsIcon {
-  background-image: url(./assets/skills.svg);
+  background-image: url(/skills.svg);
 }
 
 .blackSchoolIcon {
-  background-image: url(./assets/blackschool.svg);
+  background-image: url(/blackschool.svg);
 }
 
 .blackWorkIcon {
-  background-image: url(./assets/blackwork.svg);
+  background-image: url(/blackwork.svg);
 }
 
 .fontIcon {
-  background-image: url(./assets/font.svg);
+  background-image: url(/font.svg);
 }
 
 .accentIcon {
-  background-image: url(./assets/accent.svg);
+  background-image: url(/accent.svg);
 }
 
 .personIcon,
@@ -241,7 +241,7 @@ textarea {
 }
 
 .bin {
-  background-image: url(./assets/trash.svg);
+  background-image: url(/trash.svg);
   background-size: 100%;
   width: 20px;
   height: 20px;
@@ -249,7 +249,7 @@ textarea {
 }
 
 .edit {
-  background-image: url(./assets/edit.svg);
+  background-image: url(/edit.svg);
   background-size: 100%;
   width: 20px;
   height: 20px;
@@ -377,15 +377,15 @@ textarea {
 }
 
 .phoneIcon {
-  background-image: url(./assets/phone.svg);
+  background-image: url(/phone.svg);
 }
 
 .emailIcon {
-  background-image: url(./assets/email.svg);
+  background-image: url(/email.svg);
 }
 
 .websiteIcon {
-  background-image: url(./assets/link.svg);
+  background-image: url(/link.svg);
 }
 
 .phoneIcon,

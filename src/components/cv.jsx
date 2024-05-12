@@ -1,5 +1,5 @@
 import { useState } from "react";
-import profilePic from "../assets/profilepic.png";
+import profilePic from "/profilepic.png";
 
 function CV({ details, work, education, skills, fontColor, accentColor }) {
   const [image, setImage] = useState(profilePic);
