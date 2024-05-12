@@ -22,7 +22,7 @@ function App() {
     location: "",
     qualification: "",
     date: "",
-    skill: ""
+    skill: "",
   });
   const [work, setWork] = useState([]);
   const [education, setEducation] = useState([]);
@@ -125,15 +125,15 @@ function App() {
       ...skills,
       {
         id: uuidv4(),
-        title: details.skill
+        title: details.skill,
       },
     ]);
     setDetails({
       ...details,
-      skill: ""
+      skill: "",
     });
   }
-  
+
   function removeSkill(e) {
     setSkills(skills.filter((item) => item.id !== e.target.id));
   }
@@ -143,7 +143,7 @@ function App() {
 
     setDetails({
       ...details,
-      skill: current.title
+      skill: current.title,
     });
 
     setSkills(skills.filter((item) => item.id !== e.target.id));
@@ -168,7 +168,12 @@ function App() {
         editSkill={editSkill}
       />
       <div className="cvContainer">
-        <CV details={details} work={work} education={education} />
+        <CV
+          details={details}
+          work={work}
+          education={education}
+          skills={skills}
+        />
       </div>
     </>
   );

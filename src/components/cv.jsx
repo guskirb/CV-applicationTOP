@@ -1,4 +1,4 @@
-function CV({ details, work, education }) {
+function CV({ details, work, education, skills }) {
   const listWork = work.map((item) => (
     <div className="work" key={item.id.toString()}>
       <div className="workDates">
@@ -20,6 +20,12 @@ function CV({ details, work, education }) {
         <h5>{item.location}</h5>
       </div>
       <h4>{item.date}</h4>
+    </div>
+  ));
+
+  const listSkills = skills.map((item) => (
+    <div className="skills" key={item.id.toString()}>
+      <h4>{item.title}</h4>
     </div>
   ));
 
@@ -52,7 +58,10 @@ function CV({ details, work, education }) {
           </div>
           <p>{details.website}</p>
         </div>
-        <p className="detailsAbout">{details.about}</p>
+        <div className="cvDetails">
+          <p className="detailsAbout">{details.about}</p>
+          <div className="cvSkills">{listSkills}</div>
+        </div>
       </div>
       <div className="cvHeader">
         <div className="schoolIcon" />

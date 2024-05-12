@@ -244,12 +244,33 @@ textarea {
   padding-top: 10px;
 }
 
+.cvDetails {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 480px;
+}
+
 .detailsAbout {
   white-space: pre-line;
   overflow-wrap: break-word;
   width: 480px;
   min-width: 200px;
   padding: 10px;
+}
+
+.cvSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  width: 480px;
+}
+
+.skills {
+  background-color: bisque;
+  padding-inline: 10px;
+  border-radius: 5px;
 }
 
 .cvProfile div {
