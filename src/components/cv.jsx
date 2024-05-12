@@ -1,11 +1,11 @@
 import { useState } from "react";
-import profilePic from "../assets/profilepic.png"
+import profilePic from "../assets/profilepic.png";
 
-function CV({ details, work, education, skills }) {
-  const[image, setImage] = useState(profilePic)
+function CV({ details, work, education, skills, fontColor, accentColor }) {
+  const [image, setImage] = useState(profilePic);
 
   function handleImage(e) {
-    setImage(URL.createObjectURL(e.target.files[0]))
+    setImage(URL.createObjectURL(e.target.files[0]));
   }
 
   const listWork = work.map((item) => (
@@ -39,10 +39,15 @@ function CV({ details, work, education, skills }) {
   ));
 
   return (
-    <div className="cv">
+    <div className="cv" style={{color: fontColor}}>
       <div className="cvUpper">
         <label htmlFor="getFile" className="uploadFile">
-          <input type="file" id="getFile" className="hide" onChange={handleImage}/>
+          <input
+            type="file"
+            id="getFile"
+            className="hide"
+            onChange={handleImage}
+          />
           <img id="profilePic" src={image} />
         </label>
         <div className="cvName">
@@ -53,7 +58,7 @@ function CV({ details, work, education, skills }) {
       </div>
       <div className="cvMiddle">
         <div className="cvProfile">
-          <h2 className="cvHeader">Personal Details</h2>
+          <h2 className="cvHeader" style={{backgroundColor: accentColor}}>Personal Details</h2>
           <div>
             <div className="phoneIcon" />
             <h3>Phone Number</h3>
@@ -75,13 +80,13 @@ function CV({ details, work, education, skills }) {
           <div className="cvSkills">{listSkills}</div>
         </div>
       </div>
-      <div className="cvHeader">
-        <div className="schoolIcon" />
-        <h2>Education</h2>
+      <div className="cvHeader" style={{backgroundColor: accentColor}}>
+        <div className="blackSchoolIcon" />
+        <h2 >Education</h2>
       </div>
       <div className="cvEducation">{listEducation}</div>
-      <div className="cvHeader">
-        <div className="workIcon" />
+      <div className="cvHeader" style={{backgroundColor: accentColor}}>
+        <div className="blackWorkIcon" />
         <h2>Experience</h2>
       </div>
       <div className="cvWork">{listWork}</div>
@@ -90,4 +95,3 @@ function CV({ details, work, education, skills }) {
 }
 
 export default CV;
-

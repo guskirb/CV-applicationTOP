@@ -1,18 +1,16 @@
 import { useState } from "react";
 
-function Customise() {
-  const [fontColor, setFontColor] = useState("");
-  const [accentColor, setAccentColor] = useState("");
+function Customise( {changeFontColor, changeAccentColor}) {
 
   return (
     <div className="customiseBar">
       <label htmlFor="fontColor" className="colorPicker">
         <div className="fontIcon"></div>
-        <input type="color" id="fontColor"></input>
+        <input type="color" id="fontColor" onChange={changeFontColor}></input>
       </label>
       <label htmlFor="accentColor" className="colorPicker">
         <div className="accentIcon"></div>
-        <input type="color" id="accentColor"></input>
+        <input type="color" id="accentColor" onChange={changeAccentColor}></input>
       </label>
     </div>
   );

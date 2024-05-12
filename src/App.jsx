@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar";
 import CV from "./components/cv";
+import Customise from "./components/customise";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
   const [work, setWork] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [fontColor, setFontColor] = useState("");
+  const [accentColor, setAccentColor] = useState("");
 
   function handleChange(e) {
     setDetails({ ...details, [e.target.id]: e.target.value });
@@ -149,6 +152,14 @@ function App() {
     setSkills(skills.filter((item) => item.id !== e.target.id));
   }
 
+  function changeFontColor(e) {
+    setFontColor(e.target.value);
+  }
+
+  function changeAccentColor(e) {
+    setAccentColor(e.target.value);
+  }
+
   return (
     <>
       <Sidebar
@@ -168,11 +179,17 @@ function App() {
         editSkill={editSkill}
       />
       <div className="cvContainer">
+        <Customise
+          changeFontColor={changeFontColor}
+          changeAccentColor={changeAccentColor}
+        />
         <CV
           details={details}
           work={work}
           education={education}
           skills={skills}
+          fontColor={fontColor}
+          accentColor={accentColor}
         />
       </div>
     </>
