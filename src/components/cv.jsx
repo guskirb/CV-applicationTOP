@@ -33,7 +33,7 @@ function CV({ details, work, education, skills, fontColor, accentColor }) {
   ));
 
   const listSkills = skills.map((item) => (
-    <div className="skills" key={item.id.toString()}>
+    <div className="skills" key={item.id.toString()} style={{backgroundColor: accentColor}}>
       <h4>{item.title}</h4>
     </div>
   ));
