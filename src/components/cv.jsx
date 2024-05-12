@@ -1,4 +1,13 @@
+import { useState } from "react";
+import profilePic from "../assets/profilepic.png"
+
 function CV({ details, work, education, skills }) {
+  const[image, setImage] = useState(profilePic)
+
+  function handleImage(e) {
+    setImage(URL.createObjectURL(e.target.files[0]))
+  }
+
   const listWork = work.map((item) => (
     <div className="work" key={item.id.toString()}>
       <div className="workDates">
@@ -32,7 +41,10 @@ function CV({ details, work, education, skills }) {
   return (
     <div className="cv">
       <div className="cvUpper">
-        <div className="profilePic"></div>
+        <label htmlFor="getFile" className="uploadFile">
+          <input type="file" id="getFile" className="hide" onChange={handleImage}/>
+          <img id="profilePic" src={image} />
+        </label>
         <div className="cvName">
           <h1>{details.first}</h1>
           <h1 className="last">{details.last}</h1>
@@ -41,7 +53,7 @@ function CV({ details, work, education, skills }) {
       </div>
       <div className="cvMiddle">
         <div className="cvProfile">
-          <h2>Personal Details</h2>
+          <h2 className="cvHeader">Personal Details</h2>
           <div>
             <div className="phoneIcon" />
             <h3>Phone Number</h3>
@@ -78,3 +90,4 @@ function CV({ details, work, education, skills }) {
 }
 
 export default CV;
+
