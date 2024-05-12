@@ -23,6 +23,10 @@
   border: 2px solid blue;
 }
 
+textarea::-webkit-scrollbar-thumb {
+  border: 2px solid rgb(255, 255, 255);
+}
+
 .sidebar {
   display: flex;
   flex-flow: column;
@@ -239,14 +243,15 @@ textarea {
 }
 
 .cvName h2 {
- padding-top: 10px;
+  padding-top: 10px;
 }
 
 .detailsAbout {
+  white-space: pre-line;
   overflow-wrap: break-word;
   width: 480px;
   min-width: 200px;
-  white-space: pre-line;
+  padding: 10px;
 }
 
 .cvProfile div {
@@ -292,10 +297,30 @@ textarea {
   margin-inline: 25px;
 }
 
+.cvHeader {
+  border-block: solid black 1px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.education {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 8px; 
+}
+
+.education {
+  text-align: center;
+}
+
 .work {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
-  padding: 10px;
+  padding: 8px;
 }
 
 .workDates {
@@ -305,5 +330,7 @@ textarea {
 }
 
 .workDetails {
+  overflow-wrap: break-word;
   white-space: pre-line;
+  max-width: 400px;
 }

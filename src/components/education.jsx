@@ -9,7 +9,7 @@ function EducationInput({
   addEducation,
   education,
   removeEducation,
-  editEducation
+  editEducation,
 }) {
   const listEducation = education.map((item) => (
     <div

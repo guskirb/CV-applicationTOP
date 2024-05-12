@@ -14,7 +14,12 @@ function CV({ details, work, education }) {
 
   const listEducation = education.map((item) => (
     <div className="education" key={item.id.toString()}>
-      
+      <h3>{item.qualification}</h3>
+      <div>
+        <h4>{item.title}</h4>
+        <h5>{item.location}</h5>
+      </div>
+      <h4>{item.date}</h4>
     </div>
   ));
 
@@ -49,7 +54,15 @@ function CV({ details, work, education }) {
         </div>
         <p className="detailsAbout">{details.about}</p>
       </div>
-      <div className="cvEducation"></div>
+      <div className="cvHeader">
+        <div className="schoolIcon" />
+        <h2>Education</h2>
+      </div>
+      <div className="cvEducation">{listEducation}</div>
+      <div className="cvHeader">
+        <div className="workIcon" />
+        <h2>Experience</h2>
+      </div>
       <div className="cvWork">{listWork}</div>
     </div>
   );

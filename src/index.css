@@ -59,6 +59,11 @@ h4 {
   font-weight: 500;
 }
 
+h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
 p {
   margin: 0;
 }
