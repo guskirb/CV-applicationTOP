@@ -1,4 +1,5 @@
 # CV Builder App
-
-[This application](https://main--starlit-kulfi-eb679c.netlify.app/) was build using Vite + React. 
-
+[Application](https://main--starlit-kulfi-eb679c.netlify.app/) built using Vite + React.
+## Features
+* Display skills, work experience and education.
+* Accent and font color changer.
