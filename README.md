@@ -3,3 +3,4 @@
 ## Features
 * Display skills, work experience and education.
 * Accent and font color changer.
+* Upload photo functionality.
